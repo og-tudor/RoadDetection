@@ -1,0 +1,19 @@
+# Virtual environment
+pothole-env/
+env/
+*.egg-info/
+
+# YOLOv5 output directories (runs, weights, etc.)
+yolov5/runs/
+yolov5/weights/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files and temporary files
+*.log
+*.tmp
+
+# Archives
+*.zip
