@@ -1,17 +1,17 @@
+# Pothole Detection System
 
-# A Fully Annotated Image Dataset for Pothole Detection
+## How to Run the Model
 
-- The directory `annotated-images` contains the images having pothole and their respective annotations (as XML file).
-- The file `splits.json` contains the annotation filenames (.xml) of the **training** (80%) and **test** (20%) dataset in following format---
+- **Run on an Image:**
 
-```javascript
-{
-  "train": ["img-110.xml", "img-578.xml", "img-455.xml", ...],
-  "test": ["img-565.xml", "img-498.xml", "img-143.xml", ...]
-}
-```
+  ```bash
+  python detect.py --weights runs/train/exp2/weights/best.pt --img 416 --conf 0.25 --source path/to/your/image.jpg --max-det 20
+- **Run on a Video:**
 
-### Important Notes
+  ```bash
+  python detect.py --weights runs/train/exp2/weights/best.pt --img 416 --conf 0.25 --source path/to/your/video.mp4 --max-det 20
+- **Run on Webcam:**
 
-- The `<path>` tag in the xml annotations may not match with your environment, therefore, consider `<filename>` tag.
-- The file `splits.json` was generated randomly taking 20% of the total dataset as **test** and the rest as **train**.
+  ```bash
+  python detect.py --weights runs/train/exp2/weights/best.pt --img 416 --conf 0.25 --source 0 --max-det 20
+ 
