@@ -17,3 +17,6 @@ Thumbs.db
 
 # Archives
 *.zip
+
+# test images
+test_images/
